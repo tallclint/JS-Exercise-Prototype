@@ -76,9 +76,24 @@ function Person(name, age){
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-  
-}
+function Car(model, mpg){
+  this.model = model;
+  this.milesPerGallon = mpg;
+  this.tank = 0;
+  this.odometer = 0;
+
+  Car.prototype.fill = function(gallons){
+    this.tank += gallons;
+  }
+  Car.prototype.drive = function(dist){
+   this.odometer += dist;
+   this.tank -= dist; 
+   }
+   if(this.tank <= 0){
+       return `I ran out of fuel at ${this.odometer} miles!`;
+   
+  }
+ }
 
 
 /*
