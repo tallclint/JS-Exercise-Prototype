@@ -119,10 +119,20 @@ Baby.prototype = Object.create(Person.prototype)
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+
+  1.  Window/Global Object Binding
+  When in the global scope, the value of "this" will be the window/console Object
+
+  2.  Implicit Binding
+  Whenever a preceding dot calls a function, the object before the dot is this
+  This principle is one of the most commonly used applications of the this keyword. 
+
+  3.  New binding
+  Whenever we use a constructor function, this refers to the specific instance of the object that is created and returned by the constructor function.
+  A constructor function is a function that returns an object. It's an object creator
+
+  4.  Explicit binding 
+  Whenever we use JavaScript's call or apply method, this is explicitly defined.
 */
 
 
